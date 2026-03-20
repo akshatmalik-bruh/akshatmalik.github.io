@@ -35,4 +35,5 @@ export const FILES = {
 export const GLOBAL_FILES = ["resume"];
 export const ROOT_FILES = ["app", "aboutMe", "skills", "projects", "contact"];
 export const PUBLICATIONS_FILES = ["publication"];
+export const PUBLIC_FILES = []; // Placeholder to prevent build errors from missing exports
 export const PROJECT_FILES = PROJECTS_DATA.map(p => p.name.toLowerCase().replace(/ /g, '-'));

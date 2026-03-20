@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { useLocation, useNavigate, Routes, Route, Navigate } from "react-router-dom";
 import { COLORS as C } from "../constants/theme";
-import { FILES, ROOT_FILES, PUBLIC_FILES } from "../constants/files";
+import { FILES, ROOT_FILES, GLOBAL_FILES } from "../constants/files";
 import { ActivityBar } from "../components/VSCode/ActivityBar";
 import { Sidebar } from "../components/VSCode/Sidebar";
 import { TabsBar } from "../components/VSCode/TabsBar";
