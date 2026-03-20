@@ -8,6 +8,7 @@ const FileIcon = ({ ext }) => {
         json: { color: "#6bd0f4", letter: "{" },
         md: { color: "#8b949e", letter: "M" },
         css: { color: "#264de4", letter: "C" },
+        pdf: { color: "#e06c75", letter: "P" },
     };
     const cfg = icons[ext] || { color: "#8b949e", letter: "?" };
     return (

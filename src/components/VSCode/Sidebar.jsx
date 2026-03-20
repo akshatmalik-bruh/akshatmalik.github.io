@@ -1,6 +1,6 @@
 import { COLORS as C } from "../../constants/theme";
 import FileIcon from "./FileIcon";
-import { ROOT_FILES, PUBLIC_FILES, FILES, PROJECT_FILES, PUBLICATIONS_FILES } from "../../constants/files";
+import { GLOBAL_FILES, ROOT_FILES, FILES, PROJECT_FILES, PUBLICATIONS_FILES } from "../../constants/files";
 import { useState } from "react";
 
 const FolderRow = ({ label, open, onClick, defaultOpen }) => (
@@ -40,13 +40,12 @@ const FileRow = ({ id, active, onClick, indent = 22 }) => {
             onMouseLeave={e => !active && (e.currentTarget.style.background = "transparent")}
         >
             <FileIcon ext={f.ext} />
-            <span style={{ fontSize: 13 }}>{f.name}</span>
+            <span style={{ fontSize: 13, color: f.labelColor || "inherit" }}>{f.name}</span>
         </div>
     );
 };
 
 export const Sidebar = ({ activeTab, openFile, isMobile, sidebarOpen, setSidebarOpen }) => {
-    const [publicOpen, setPublicOpen] = useState(false);
     const [projectsOpen, setProjectsOpen] = useState(true);
     const [publicationsOpen, setPublicationsOpen] = useState(true);
 
@@ -76,14 +75,11 @@ export const Sidebar = ({ activeTab, openFile, isMobile, sidebarOpen, setSidebar
             }}>Explorer</div>
 
             <div style={{ flex: 1, overflowY: "auto", padding: "4px 0" }}>
-                <FolderRow label="public" open={publicOpen} onClick={() => setPublicOpen(o => !o)} />
-                {publicOpen && (
-                    <div>
-                        {PUBLIC_FILES.map(id => (
-                            <FileRow key={id} id={id} active={id === activeTab} onClick={() => openFile(id)} indent={28} />
-                        ))}
-                    </div>
-                )}
+                <div>
+                    {GLOBAL_FILES.map(id => (
+                        <FileRow key={id} id={id} active={id === activeTab} onClick={() => openFile(id)} indent={12} />
+                    ))}
+                </div>
 
                 <FolderRow label="portfolio" open defaultOpen />
                 <div>

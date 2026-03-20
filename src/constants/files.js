@@ -14,7 +14,7 @@ export const FILES = {
     skills: { name: "skills.tsx", ext: "tsx", lang: "TypeScript", Content: Skills, path: "/skills" },
     projects: { name: "projects.js", ext: "js", lang: "JavaScript", Content: Projects, path: "/projects" },
     contact: { name: "contact.json", ext: "json", lang: "JSON", Content: Contact, path: "/contact" },
-    resume: { name: "resume.pdf", ext: "pdf", lang: "PDF", Content: Resume, folder: "public", path: "/resume" },
+    resume: { name: "resume.pdf", ext: "pdf", lang: "PDF", Content: Resume, path: "/resume", labelColor: "#e06c75" },
     publication: { name: "publication.md", ext: "md", lang: "Markdown", Content: Publication, folder: "publications", path: "/publications/youth-standpoints" },
     
     // Dynamic project files
@@ -32,7 +32,7 @@ export const FILES = {
     }, {})
 };
 
+export const GLOBAL_FILES = ["resume"];
 export const ROOT_FILES = ["app", "aboutMe", "skills", "projects", "contact"];
 export const PUBLICATIONS_FILES = ["publication"];
-export const PUBLIC_FILES = ["resume"];
 export const PROJECT_FILES = PROJECTS_DATA.map(p => p.name.toLowerCase().replace(/ /g, '-'));
