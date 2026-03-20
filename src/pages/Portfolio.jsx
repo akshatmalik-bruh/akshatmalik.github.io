@@ -226,7 +226,7 @@ export default function Portfolio() {
     const s = {
         root: {
             display: "flex", flexDirection: "column",
-            height: "100vh", width: "100vw", overflow: "hidden",
+            height: "100dvh", width: "100vw", overflow: "hidden",
             background: C.bg, color: C.plain,
             fontFamily: "'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace",
             fontSize: 13,
@@ -247,7 +247,7 @@ export default function Portfolio() {
         },
         codeArea: {
             flex: 1, overflowY: "auto", 
-            padding: isMobile ? "16px" : "24px 28px",
+            padding: isMobile ? "16px 16px 80px 16px" : "24px 28px 60px 28px",
             scrollbarWidth: "thin", scrollbarColor: `${C.lineNum} transparent`,
         },
     };
