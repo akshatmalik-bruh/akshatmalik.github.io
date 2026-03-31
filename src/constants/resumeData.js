@@ -3,7 +3,7 @@ import { COLORS as C } from "./theme";
 export const ABOUT_DATA = {
     name: "Akshat Malik",
     role: "Senior Frontend Developer",
-    location: "Jaipur, Rajasthan 🇮🇳",
+    location: "Bit Mesra, Ranchi 🇮🇳",
     available: '"actively looking for jobs"',
     experience: "6th",
     facts: [
